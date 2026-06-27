@@ -1,0 +1,33 @@
+{
+  "loader": {
+    "name": "java_plain",
+    "version": "1.0"
+  },
+  "license": "All Rights Reserved",
+  "global": {
+    "version": "${version}",
+    "links": {
+      "homepage": "https://morethancore.fun"
+    },
+    "contributors": [
+      {
+        "name": "More Than Core",
+        "description": "Developer"
+      }
+    ],
+    "dependencies": [
+      {
+        "id": "spongeapi",
+        "version": "${sponge_api_version}"
+      }
+    ]
+  },
+  "plugins": [
+    {
+      "id": "obsidianwatch",
+      "name": "Obsidian Watch",
+      "entrypoint": "com.morethancore.obsidianwatch.sponge.ObsidianWatchSpongePlugin",
+      "description": "Sponge API integration for Obsidian Watch."
+    }
+  ]
+}

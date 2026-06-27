@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "obsidianwatch",
+  "version": "${version}",
+  "name": "Obsidian Watch",
+  "description": "Fabric server integration for Obsidian Watch.",
+  "authors": ["More Than Core"],
+  "contact": {
+    "homepage": "https://morethancore.fun"
+  },
+  "license": "All Rights Reserved",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "com.morethancore.obsidianwatch.fabric.ObsidianWatchFabric"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}",
+    "java": ">=21"
+  }
+}

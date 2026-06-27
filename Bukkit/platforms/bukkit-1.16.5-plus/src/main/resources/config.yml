@@ -1,0 +1,58 @@
+# Obsidian Watch - Bukkit/Spigot/Paper
+enabled: true
+apiBaseUrl: "https://your-obsidian-watch-site.example"
+apiKey: ""
+serverName: ""
+serverBrand: "bukkit"
+syncIntervalSeconds: 120
+
+actions:
+  notifyOps: true
+  watchlistAction: "NOTIFY"       # NONE, NOTIFY, KICK
+  confirmedAction: "BAN_DRY_RUN"  # NONE, NOTIFY, KICK, TEMPBAN, BAN_DRY_RUN, BAN
+  postActionLogs: true
+  allowRealBans: false
+
+safety:
+  joinActionCooldownSeconds: 300
+  tempbanDurationSeconds: 604800
+  exemptOps: true
+  exemptCreative: true
+
+messages:
+  appealUrl: "https://your-obsidian-watch-site.example/appeals"
+  watchlistKickMessage: |-
+    You were removed by Obsidian Watch.
+
+    Status: {list}
+    Category: {category}
+    Severity: {severity}
+    Reason: {reason}
+    Appeal: {appeal_url}
+  confirmedKickMessage: |-
+    You were removed by Obsidian Watch.
+
+    Status: {list}
+    Category: {category}
+    Severity: {severity}
+    Reason: {reason}
+    Appeal: {appeal_url}
+  tempbanMessage: |-
+    You are temporarily banned by Obsidian Watch.
+
+    Status: {list}
+    Category: {category}
+    Severity: {severity}
+    Duration: {tempban_duration}
+    Reason: {reason}
+    Appeal: {appeal_url}
+  banMessage: |-
+    You are banned by Obsidian Watch.
+
+    Status: {list}
+    Category: {category}
+    Severity: {severity}
+    Reason: {reason}
+    Appeal: {appeal_url}
+
+localExemptUuids: []

@@ -1,0 +1,113 @@
+# Gradle / Java
+.gradle/
+**/.gradle/
+**/build/
+**/out/
+*.class
+
+# Local tooling bootstrapped by scripts
+.tools/
+
+# Build outputs
+*.jar
+*.war
+*.ear
+!**/gradle/wrapper/gradle-wrapper.jar
+
+# Minecraft test/runtime folders
+**/run/
+**/runs/
+**/logs/
+**/crash-reports/
+**/world/
+**/world_nether/
+**/world_the_end/
+**/server.properties
+**/eula.txt
+**/ops.json
+**/banned-players.json
+**/banned-ips.json
+**/whitelist.json
+**/usercache.json
+**/libraries/
+**/versions/
+**/mods/
+**/config/
+**/defaultconfigs/
+**/kubejs/
+**/plugins/
+
+# Local secrets / API keys
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.jks
+*secret*
+*secrets*
+ow-config*.toml
+obsidian-watch*.toml
+application-local.*
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local archives
+*.zip
+*.7z
+*.rar
+
+# Gradle / build output
+.gradle/
+**/build/
+out/
+target/
+
+# Local tooling
+.tools/
+
+# Generated releases
+release/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Secrets / local config
+.env
+.env.*
+*.local
+application-local.*
+config/local.*
+**/obsidianwatch.properties
+**/forwarding.secret
+**/*secret*
+**/*apikey*
+**/*api-key*
+**/*token*
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.rar

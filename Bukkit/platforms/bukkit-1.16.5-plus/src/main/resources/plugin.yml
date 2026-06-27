@@ -1,0 +1,23 @@
+name: ObsidianWatch
+main: com.morethancore.obsidianwatch.bukkit.ObsidianWatchPlugin
+version: ${version}
+api-version: 1.16
+author: More Than Core
+description: Server-side Bukkit/Spigot/Paper Obsidian Watch integration.
+website: https://morethancore.fun
+commands:
+  ow:
+    description: Obsidian Watch admin command.
+    usage: /ow help
+    aliases: [obsidianwatch]
+    permission: obsidianwatch.admin
+permissions:
+  obsidianwatch.admin:
+    description: Allows use of Obsidian Watch admin commands.
+    default: op
+  obsidianwatch.notify:
+    description: Receives Obsidian Watch join notifications.
+    default: op
+  obsidianwatch.exempt:
+    description: Exempts a player from Obsidian Watch enforcement.
+    default: false

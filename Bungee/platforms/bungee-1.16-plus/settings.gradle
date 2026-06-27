@@ -1,0 +1,27 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven {
+            name = 'md5Public'
+            url = 'https://repo.md-5.net/content/groups/public/'
+        }
+        maven {
+            name = 'md5Snapshots'
+            url = 'https://repo.md-5.net/content/repositories/snapshots/'
+        }
+        maven {
+            name = 'sonatypeSnapshots'
+            url = 'https://oss.sonatype.org/content/repositories/snapshots/'
+        }
+    }
+}
+
+rootProject.name = 'obsidian-watch-bungee-1.16-plus'

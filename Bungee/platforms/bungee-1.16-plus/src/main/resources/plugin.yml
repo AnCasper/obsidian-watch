@@ -1,0 +1,5 @@
+name: ObsidianWatch
+main: com.morethancore.obsidianwatch.bungee.ObsidianWatchBungeePlugin
+version: ${version}
+author: More Than Core
+description: BungeeCord and Waterfall proxy integration for Obsidian Watch.

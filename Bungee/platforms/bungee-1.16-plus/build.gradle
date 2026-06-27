@@ -1,0 +1,54 @@
+plugins {
+    id 'java'
+    id 'com.gradleup.shadow' version '8.3.6'
+}
+
+version = mod_version
+group = mod_group_id
+
+base {
+    archivesName = 'obsidian-watch-bungee-1.16-plus'
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
+}
+
+dependencies {
+    compileOnly('net.md-5:bungeecord-api:1.16-R0.3') {
+        transitive = false
+    }
+    compileOnly('net.md-5:bungeecord-chat:1.16-R0.3') {
+        transitive = false
+    }
+    compileOnly('net.md-5:bungeecord-event:1.16-R0.3') {
+        transitive = false
+    }
+    implementation 'com.google.code.gson:gson:2.10.1'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 8
+}
+
+processResources {
+    filesMatching(['plugin.yml']) {
+        expand([
+                version: project.version
+        ])
+    }
+}
+
+shadowJar {
+    archiveClassifier.set('')
+    relocate 'com.google.gson', 'com.morethancore.obsidianwatch.bungee.libs.gson'
+}
+
+jar {
+    enabled = false
+}
+
+build {
+    dependsOn shadowJar
+}

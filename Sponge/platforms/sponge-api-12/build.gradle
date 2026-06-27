@@ -1,0 +1,48 @@
+plugins {
+    id 'java'
+}
+
+version = plugin_version
+group = plugin_group
+
+base {
+    archivesName = 'obsidian-watch-sponge-api-12'
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
+}
+
+dependencies {
+    compileOnly "org.spongepowered:spongeapi:${sponge_api_version}"
+    compileOnly 'com.google.code.gson:gson:2.10.1'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 21
+}
+
+processResources {
+    inputs.property 'version', project.version
+    inputs.property 'sponge_api_version', sponge_api_version
+
+    filesMatching(['META-INF/sponge_plugins.json']) {
+        expand([
+                version: project.version,
+                sponge_api_version: sponge_api_version
+        ])
+    }
+}
+
+jar {
+    archiveClassifier.set('')
+    manifest {
+        attributes([
+                'Specification-Title'   : 'obsidianwatch',
+                'Specification-Version' : '1',
+                'Implementation-Title'  : 'Obsidian Watch Sponge',
+                'Implementation-Version': project.version
+        ])
+    }
+}
